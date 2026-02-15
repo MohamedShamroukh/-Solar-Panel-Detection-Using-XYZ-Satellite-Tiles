@@ -178,19 +178,3 @@ Mohamed Shamroukh
 🌐 mohamedshamroukh.github.io/portfolio
 
 Issues: GitHub Issues
-
-Last updated: February 2026
-
-text
-
-***
-
-This shorter version:
-- ✅ **~50% shorter** than the full version
-- ✅ Includes all essential information
-- ✅ Credits GeoAI with proper citation
-- ✅ Has your contact details
-- ✅ Clear structure and quick to scan
-- ✅ Professional and GitHub-ready
-
-Perfect for researchers and developers who want the key information quickly! 🚀
