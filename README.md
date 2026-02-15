@@ -1,25 +1,25 @@
-🌞 Solar Panel Detection from Satellite Imagery
+# 🌞 Solar Panel Detection from Satellite Imagery
+
 Automated detection of solar panels on building rooftops using free satellite imagery and deep learning.
 
-[
-[
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 
-Features
-✅ Free satellite imagery (Google/ESRI tiles - no API key needed)
+## Features
 
-✅ Pre-trained AI model from GeoAI
+- ✅ **Free satellite imagery** (Google/ESRI tiles - no API key needed)
+- ✅ **Pre-trained AI model** from [GeoAI](https://github.com/opengeos/geoai)
+- ✅ **Parallel processing** for speed
+- ✅ **Fast reruns** (saves imagery locally)
+- ✅ **Multiple outputs** (GeoJSON, CSV, maps)
 
-✅ Parallel processing for speed
+## Quick Start
 
-✅ Fast reruns (saves imagery locally)
+### 1. Installation
 
-✅ Multiple outputs (GeoJSON, CSV, maps)
-
-Quick Start
-1. Installation
-bash
-git clone https://github.com/yourusername/solar-panel-detection.git
-cd solar-panel-detection
+```bash
+git clone https://github.com/MohamedShamroukh/-Solar-Panel-Detection-Using-XYZ-Satellite-Tiles.git
+cd -Solar-Panel-Detection-Using-XYZ-Satellite-Tiles
 pip install -r requirements.txt
 2. Run Detection
 bash
@@ -39,29 +39,38 @@ solar_panel_detection_rerun.ipynb
 Fast parameter testing (2-5 min - no re-downloading)
 
 Requirements
-text
-geoai-py>=0.11.0
-geopandas>=0.14.0
-rasterio>=1.3.0
-earthengine-api>=0.1.0
-pillow>=10.0.0
-requests>=2.31.0
-pandas>=2.0.0
-numpy>=1.24.0
-matplotlib>=3.7.0
+Python 3.8+
+
+geoai-py >= 0.11.0
+
+geopandas >= 0.14.0
+
+rasterio >= 1.3.0
+
+earthengine-api >= 0.1.0
+
+pillow >= 10.0.0
+
+requests >= 2.31.0
+
+pandas >= 2.0.0
+
+numpy >= 1.24.0
+
+matplotlib >= 3.7.0
+
 Input/Output
 Input
 Building footprints in GeoJSON (WGS84 projection)
 
-Output
+Output Structure
 text
 output/solar_detection/
 ├── imagery/                        # 512×512 px satellite tiles
 ├── solar_panels_detected.geojson   # Point locations
 ├── solar_panels_detected.csv       # Tabular results
 └── detection_map.png               # Visualization
-GeoJSON attributes:
-
+GeoJSON Attributes
 building_id: Building identifier
 
 confidence: Detection confidence (0-1)
@@ -80,22 +89,19 @@ MAX_WORKERS	Parallel threads	4	2-8
 Tip: Lower thresholds = more detections, Higher thresholds = fewer but higher quality
 
 Methodology
-Imagery Acquisition
-
+1. Imagery Acquisition
 Downloads satellite tiles from Google/ESRI (zoom 20, ~0.6m/pixel)
 
 Stitches 3×3 tile grid and crops 512×512 px around each building
 
-Detection
-
+2. Detection
 Uses GeoAI pre-trained U-Net model
 
 Generates confidence masks for solar panel locations
 
 Applies thresholding and coverage filters
 
-Export
-
+3. Export
 Extracts building centroids with solar detections
 
 Outputs georeferenced points with metadata
@@ -130,19 +136,16 @@ for idx, building in buildings.iterrows():
 solar_gdf.to_file("solar_panels_detected.geojson")
 Troubleshooting
 Black/empty imagery?
-
 Tile servers may be rate-limited - add delays between downloads
 
 Check internet connection
 
 No detections?
-
 Lower CONFIDENCE_THRESHOLD (try 0.35)
 
 Adjust MIN_COVERAGE_PCT and MAX_COVERAGE_PCT
 
 Out of memory?
-
 Reduce MAX_WORKERS (try 2)
 
 Process smaller batches
@@ -173,6 +176,6 @@ Google & ESRI - Satellite tile services
 Contact
 Mohamed Shamroukh
 📧 M.Shamroukh@lboro.ac.uk
-🌐 [mohamedshamroukh.github.io/portfolio](https://mohamedshamroukh.github.io/portfolio/)
+🌐 mohamedshamroukh.github.io/portfolio
 
 Issues: GitHub Issues
