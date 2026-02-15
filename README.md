@@ -1,25 +1,23 @@
-# 🌞 Solar Panel Detection from Satellite Imagery
-
+🌞 Solar Panel Detection from Satellite Imagery
 Automated detection of solar panels on building rooftops using free satellite imagery and deep learning.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[
+[
 
-## Features
+Features
+✅ Free satellite imagery (Google/ESRI tiles - no API key needed)
 
-- ✅ **Free satellite imagery** (Google/ESRI tiles - no API key needed)
-- ✅ **Pre-trained AI model** from [GeoAI](https://github.com/opengeos/geoai)
-- ✅ **Parallel processing** for speed
-- ✅ **Fast reruns** (saves imagery locally)
-- ✅ **Multiple outputs** (GeoJSON, CSV, maps)
+✅ Pre-trained AI model from GeoAI
 
----
+✅ Parallel processing for speed
 
-## Quick Start
+✅ Fast reruns (saves imagery locally)
 
-### 1. Installation
+✅ Multiple outputs (GeoJSON, CSV, maps)
 
-```bash
+Quick Start
+1. Installation
+bash
 git clone https://github.com/yourusername/solar-panel-detection.git
 cd solar-panel-detection
 pip install -r requirements.txt
@@ -175,6 +173,6 @@ Google & ESRI - Satellite tile services
 Contact
 Mohamed Shamroukh
 📧 M.Shamroukh@lboro.ac.uk
-🌐 mohamedshamroukh.github.io/portfolio
+🌐 [mohamedshamroukh.github.io/portfolio](https://mohamedshamroukh.github.io/portfolio/)
 
 Issues: GitHub Issues
